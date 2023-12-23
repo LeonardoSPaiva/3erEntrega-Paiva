@@ -37,7 +37,7 @@ const CheckoutForm = ({ onConfirm }) => {
     })()
 
     return (
-        <form form onSubmit={handleConfirm} class="row g-3 needs-validation border m-2 border-warning" novalidate >
+        <form form onSubmit={handleConfirm} class="row g-3 needs-validation border m-2 border-primary" novalidate >
             <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="validationCustom01" value={name} onChange={({ target }) => setName(target.value)} required />
@@ -72,13 +72,11 @@ const CheckoutForm = ({ onConfirm }) => {
                     <label class="form-check-label" for="invalidCheck">
                         Acepte los terminos y condiciones
                     </label>
-                    <div class="invalid-feedback">
-                        Debe aceptarlos antes de continuar
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-12">
-                <button class="btn btn-warning m-1" type="submit">Crear Orden</button>
+                <button class="btn btn-primary m-1" type="submit">Crear Orden</button>
             </div>
         </form >
 
