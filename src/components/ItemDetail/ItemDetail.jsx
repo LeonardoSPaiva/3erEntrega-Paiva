@@ -1,8 +1,6 @@
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {

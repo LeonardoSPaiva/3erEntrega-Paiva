@@ -6,18 +6,19 @@ import { useContext, useState } from "react"
 import CheckoutForm from "../CheckoutForm/CheckoutForm"
 
 
+
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState("")
     const { cart, total, clearCart } = useContext(CartContext)
 
-    const createOrder = async ({ name, phone, email }) => {
+    const createOrder = async ({ name, lastName, phone, email, creditCard }) => {
         setLoading(true)
 
         try {
             const objOrder = {
                 buyer: {
-                    name, phone, email
+                    name, lastName, phone, email, creditCard
                 },
                 items: cart,
                 total: total,
@@ -58,7 +59,7 @@ const Checkout = () => {
                 setOrderId(orderAdded.id)
                 clearCart()
             } else {
-                console.error("Sin Stock")
+                console.error("Hay productos que están fuera de Stock")
             }
         } catch (error) {
             console.log(error)
@@ -69,10 +70,10 @@ const Checkout = () => {
 
     if (loading) {
         return (<div>
-            <h1>Espere un momento</h1>
+            <h1>Crando el Id de su Pedido...</h1>
             <div class="d-flex justify-content-center">
-                <div class="spinner-border text-warning" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Cargando.</span>
                 </div>
             </div>
         </div>
@@ -80,7 +81,7 @@ const Checkout = () => {
         )
     }
     if (orderId) {
-        return <h1> El ID de su compra es: {orderId}</h1>
+        return <h1>El id de su orden es: {orderId}</h1>
     }
 
     return (

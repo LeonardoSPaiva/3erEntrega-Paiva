@@ -4,8 +4,10 @@ import { useState } from "react"
 
 const CheckoutForm = ({ onConfirm }) => {
     const [name, setName] = useState("")
+    const [lastName, setLastName] = useState("")
     const [phone, setPhone] = useState("")
     const [email, setEmail] = useState("")
+    const [creditCard, setCreditCard] = useState("")
 
     const handleConfirm = (event) => {
         event.preventDefault()
@@ -18,11 +20,10 @@ const CheckoutForm = ({ onConfirm }) => {
     }
 
     (() => {
-        'use strict'
+        
 
         const forms = document.querySelectorAll('.needs-validation')
 
-        // Loop over them and prevent submission
         Array.from(forms).forEach(form => {
             form.addEventListener('submit', event => {
                 if (!form.checkValidity()) {
@@ -40,23 +41,30 @@ const CheckoutForm = ({ onConfirm }) => {
             <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="validationCustom01" value={name} onChange={({ target }) => setName(target.value)} required />
-                <div class="valid-feedback">
-                    Bien!
-                </div>
+                
+                
             </div>
+
             <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Telefono</label>
-                <input type="text" class="form-control" id="validationCustom02" value={phone} onChange={({ target }) => setPhone(target.value)} required />
-                <div class="valid-feedback">
-                    Bien!
-                </div>
+            <label for="validationCustom01" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="validationCustom02" value={lastName} onChange={({ target }) => setLastName(target.value)} required />
+              
+            
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
+                <label for="validationCustom02" class="form-label">Telefono</label>
+                <input type="numbert" class="form-control" id="validationCustom03" value={phone} onChange={({ target }) => setPhone(target.value)} required />
+              
+            </div>
+            <div class="col-md-5">
                 <label for="validationCustom03" class="form-label">Email</label>
-                <input type="email" class="form-control" value={email} onChange={({ target }) => setEmail(target.value)} id="validationCustom03" required />
-                <div class="invalid-feedback">
-                    Complete su E-mail
-                </div>
+                <input type="email" class="form-control" value={email} onChange={({ target }) => setEmail(target.value)} id="validationCustom04" required />
+                
+            </div>
+            <div class="col-md-5">
+                <label for="validationCustom03" class="form-label">Tarjeta de Credito</label>
+                <input type="number" class="form-control" value={creditCard} onChange={({ target }) => setCreditCard(target.value)} id="validationCustom05" required />
+               
             </div>
             <div class="col-12">
                 <div class="form-check">
