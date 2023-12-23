@@ -23,8 +23,8 @@ const Cart = () => {
             {cart.map(p => <CartItem key={p.id} {...p} removeItem={removeItem} />)}
             <h3>Total ${total}</h3>
             <div className="d-flex justify-content-center">
-                <button onClick={() => clearCart()} className="btn btn-warning m-1">Vaciar Carrito</button>
-                <Link to="/checkout" className="btn btn-warning m-1">Checkout</Link>
+                <button onClick={() => clearCart()} className="btn btn-primary m-1">Vaciar Carrito</button>
+                <Link to="/checkout" className="btn btn-primary m-1">Checkout</Link>
             </div>
         </div>
     )
