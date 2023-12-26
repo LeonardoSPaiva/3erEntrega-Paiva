@@ -13,7 +13,9 @@ const CheckoutForm = ({ onConfirm }) => {
         event.preventDefault()
 
         const userData = {
-            name, phone, email
+             buyer: {
+                    name, lastName, phone, email, creditCard
+                },
         }
 
         onConfirm(userData)

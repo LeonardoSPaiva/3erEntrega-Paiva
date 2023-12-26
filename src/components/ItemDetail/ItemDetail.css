@@ -1,0 +1,38 @@
+/* styles.css */
+
+.card {
+    width: 18rem;
+    border-radius: 5px;
+    background-color: rgba(173, 216, 230, 0.8);
+    border: none;
+    transition: background-color 0.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    max-height: 150px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover;
+    margin: auto;
+    margin-top: 10px;
+    transition: transform 0.5s;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-top: 10px;
+  }
+  
+  .card-buttons {
+    display: flex;
+  }
+  
+  .card-buttons button {
+    margin-right: 10px;
+  }
+  

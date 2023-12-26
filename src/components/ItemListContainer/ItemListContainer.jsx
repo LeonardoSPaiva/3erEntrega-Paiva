@@ -3,7 +3,7 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../services/firebaseConfig";
-import Carrusel from "../Carrusel/Carrusel";
+import Carousel from "../Carrusel/Carousel";
 
 const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([])
@@ -35,10 +35,10 @@ const ItemListContainer = ({ greeting }) => {
     }, [categoryId])
 
     return (
-        <div>
-            
-            <h1>{greeting}</h1>
-            <h1>{categoryId}</h1>
+        <div style={{ textAlign: "center"}}>
+            <Carousel />
+            <h1 style={{ fontWeight: "bold", fontFamily: "monospace" }}>{greeting}</h1>
+            <h1 style={{ fontWeight: "bold", fontFamily: "monospace" }}>{categoryId}</h1>
             <ItemList products={products} />
         </div>
     )
