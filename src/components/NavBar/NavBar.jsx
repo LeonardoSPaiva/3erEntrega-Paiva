@@ -1,6 +1,7 @@
-import Brand from "./Brand"
-import CartWidget from "../CartWidget/CartWidget"
+import Brand from "./Brand/Brand"
+import CartWidget from "./CartWidget/CartWidget"
 import { Link } from "react-router-dom"
+import "./NavBar.css"
 
 const NavBar = () => {
     return (
@@ -14,11 +15,11 @@ const NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div className="navbar-nav Categories">
-                        <Link to={`/category/Auriculares`} className="nav-link" aria-current="page">Auriculares</Link>
-                        <Link to={`/category/Teclados`} className="nav-link">Teclados</Link>
-                        <Link to={`/category/Mouses`} className="nav-link">Mouses</Link>
-                        <Link to={`/category/Microfonos`} className="nav-link">Microfonos</Link>
-                        <Link to={`/category/Parlantes`} className="nav-link">Parlantes</Link>
+                        <Link to={`/category/Auriculares`} className="nav-link" style={{ color: 'white', transition: 'font-size 0.2s, box-shadow 0.2s' }}>Auriculares</Link>
+                        <Link to={`/category/Teclados`} className="nav-link" style={{ color: 'white', transition: 'font-size 0.2s, box-shadow 0.2s' }}>Teclados</Link>
+                        <Link to={`/category/Mouses`} className="nav-link" style={{ color: 'white', transition: 'font-size 0.2s, box-shadow 0.2s' }}>Mouses</Link>
+                        <Link to={`/category/Microfonos`} className="nav-link" style={{ color: 'white', transition: 'font-size 0.2s, box-shadow 0.2s' }}>Microfonos</Link>
+                        <Link to={`/category/Parlantes`} className="nav-link" style={{ color: 'white', transition: 'font-size 0.2s, box-shadow 0.2s' }}>Parlantes</Link>
                     </div>
                 </div>
             </div>
@@ -28,4 +29,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-

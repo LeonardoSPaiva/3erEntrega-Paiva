@@ -1,0 +1,20 @@
+/* Estilos generales para los enlaces */
+.nav-link {
+    color: white;
+    transition: font-size 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2em; /* Ajusta el tamaño de las letras */
+    font-family: sans-serif;
+    margin-right: 25px;
+  }
+  
+  /* Estilos al pasar el mouse sobre los enlaces */
+  .nav-link:hover {
+    font-size: 1.1em; /* Ajusta el tamaño al pasar el mouse */
+  }
+  .CartWidget {
+    margin-right: 60px; /* Ajusta el margen derecho según tu preferencia */
+}
+

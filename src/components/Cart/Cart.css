@@ -1,0 +1,13 @@
+/* CartStyles.css */
+
+.cart-container {
+    width: 100%;
+  }
+  
+  .cart-total {
+    text-align: center;
+  }
+  .empty {
+    text-align: center;
+    margin-top: 50px; /* Ajusta según sea necesario */
+  }

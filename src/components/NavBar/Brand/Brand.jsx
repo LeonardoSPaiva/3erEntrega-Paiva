@@ -1,5 +1,5 @@
 
-import brandImage from '../../assets/Brand/brand.png';
+import brandImage from '../../../assets/Brand/brand.png';
 import { Link } from 'react-router-dom';
 const Brand = () => {
 

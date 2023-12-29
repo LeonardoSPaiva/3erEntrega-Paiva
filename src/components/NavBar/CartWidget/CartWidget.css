@@ -1,0 +1,14 @@
+/* CartWidget.css */
+.cart-badge {
+    width: 30px; /* Ajusta el ancho del círculo */
+    height: 30px; /* Ajusta la altura del círculo */
+    font-size: 16px;
+    color: white;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
