@@ -11,10 +11,11 @@ const Footer = () => {
           <li className="nav-item"><Link href="/" className="nav-link px-2 text-body-secondary">FAQs</Link></li>
           <li className="nav-item"><Link href="/" className="nav-link px-2 text-body-secondary">About</Link></li>
         </ul>
-        <p className="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
+        <p className="text-center text-body-secondary" style={{ marginTop: "0", marginBottom: "0" }}>&copy; 2023 Delta-Gamer</p> 
+        <p className="text-center text-body-secondary" style={{ marginTop: "0", marginBottom: "0" }}>Diseñado por Leonardo S. Paiva</p>
       </footer>
     </div>
-  )
-}
+  );
+};
 
 export default Footer;
